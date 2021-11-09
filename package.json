@@ -44,6 +44,6 @@
     "flow-typed": "^2.4.0",
     "lerna": "2.9.0",
     "prettier": "^1.14.3",
-    "uglify-js": "^3.4.9"
+    "uglify-js": "^3.14.3"
   }
 }
