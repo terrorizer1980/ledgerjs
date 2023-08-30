@@ -20,7 +20,9 @@
     "watch": "lerna run --parallel watch",
     "clean": "rm -rf node_modules packages/*/node_modules/ packages/*/flow-typed/ packages/*/lib flow-typed",
     "rebuild": "lerna run clean && lerna run build",
-    "publish": "yarn && lerna run clean && lerna run build && lerna publish --registry=https://registry.npmjs.org/"
+    "publish": "yarn && lerna run clean && lerna run build && lerna publish --registry=https://registry.npmjs.org/",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -44,6 +46,8 @@
     "flow-typed": "^2.4.0",
     "lerna": "2.9.0",
     "prettier": "^1.14.3",
-    "uglify-js": "^3.4.9"
-  }
+    "uglify-js": "^3.4.9",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
